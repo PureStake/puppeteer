@@ -1,0 +1,15 @@
+name: "puppeteer-headful"
+author: "PureStake"
+description: "A GitHub action to run Puppeteer in headful mode"
+branding:
+  icon: play
+  color: green
+inputs:
+  args:
+    description: "e.g. npm run test"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs }}
